@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Auth, signInWithEmailAndPassword } from '@angular/fire/auth';
+import { Auth, signInWithEmailAndPassword,signOut} from '@angular/fire/auth';
 import { map } from 'rxjs';
 import { User } from '../auth';
 
@@ -13,7 +13,7 @@ export class AuthService {
     return this._user
   }
   constructor(private auth:Auth) {
-   // this._user = JSON.parse(localStorage.getItem('user')!)|| {};
+   this._user = JSON.parse(localStorage.getItem('user')!)|| {};
    }
 
   login(email:string, password:string){
@@ -25,5 +25,12 @@ export class AuthService {
   //       }
   //     }
   //   })
+  }
+
+  logout(){
+    signOut(this.auth)
+    localStorage.clear()
+    console.log("logout?")
+    location.reload()
   }
 }

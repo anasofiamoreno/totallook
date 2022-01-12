@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { ModalLoginComponent } from '../modal-login/modal-login.component';
+import { AuthService } from '../service/auth.service';
+import { onAuthStateChanged, getAuth} from 'firebase/auth';
+import { Auth } from '@angular/fire/auth';
 
 
 @Component({
@@ -10,8 +13,15 @@ import { ModalLoginComponent } from '../modal-login/modal-login.component';
 })
 export class HeaderComponent implements OnInit {
 
+  email: any  = ''
+  user: any = ""
+
   constructor(
-    private modalService: NgbModal
+    private modalService: NgbModal,
+    private auth: AuthService,
+    private onAuth: Auth
+      
+   
 
   ) { }
 
@@ -23,9 +33,15 @@ export class HeaderComponent implements OnInit {
         keyboard: false,
         backdrop: 'static'
       });
+      
+    }
 
+    logout(){
+      this.auth.logout()
+      
     }
   ngOnInit(): void {
+    this.user = this.auth.user.email
   }
 
 }
