@@ -44,8 +44,9 @@ public user!:User
             }
             this.authService._user=this.user
             console.log(this.user)
-            //localStorage.setItem('user',JSON.stringify(this.authService.user) );
+            localStorage.setItem('user',JSON.stringify(this.authService.user) );
             this.router.navigateByUrl('./categories')
+            location.reload();
           
           
         })
@@ -64,7 +65,11 @@ public user!:User
   //   }
       
     
-    
+
+  }
+
+  logout(){
+    this.authService.logout()
   }
   ngOnInit(): void {
   }
