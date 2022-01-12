@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-templatecategori',
@@ -7,9 +7,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TemplatecategoriComponent implements OnInit {
 
+  @Input() imglink: string = ''
+  @Input() catlink: string = ''
+  @Input() editlink: string =''
+  @Input() catname: string = ''
+  User: boolean= true
+
   constructor() { }
 
   ngOnInit(): void {
   }
+
+  
 
 }

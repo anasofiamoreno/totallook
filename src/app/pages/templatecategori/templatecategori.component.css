@@ -1,10 +1,17 @@
 .imgtem{
-    width: 200px;
-    height: 100px;
+    width: 300px;
+    height: 200px;
 }
 
 button {
   margin-top: 5px;
   margin-left: 4px;
   height: 25x;
+}
+
+.menubtnedit{
+  display: flex;
+  flex-direction: row;
+  justify-content:space-around;
+  
 }
