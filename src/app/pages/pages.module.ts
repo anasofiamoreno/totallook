@@ -5,6 +5,8 @@ import { CategoriesComponent } from './categories/categories.component';
 import { TemplatecategoriComponent } from './templatecategori/templatecategori.component';
 import { FormsModule } from '@angular/forms';
 import { AuthModule } from '../auth/auth.module';
+import { EditcategoryComponent } from './editcategory/editcategory.component';
+
 
 
 
@@ -12,7 +14,8 @@ import { AuthModule } from '../auth/auth.module';
   declarations: [
     MainComponent,
     CategoriesComponent,
-    TemplatecategoriComponent
+    TemplatecategoriComponent,
+    EditcategoryComponent
   ],
   imports: [
     CommonModule,
