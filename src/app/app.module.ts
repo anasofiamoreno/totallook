@@ -8,10 +8,10 @@ import { PagesModule } from './pages/pages.module';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AuthModule } from './auth/auth.module';
 
-import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
+
 import { environment } from '../environments/environment';
 import { provideAuth,getAuth } from '@angular/fire/auth';
-import { provideFirestore,getFirestore } from '@angular/fire/firestore';
+
 
 import { provideStorage,getStorage } from '@angular/fire/storage';
 
@@ -38,11 +38,6 @@ import { provideStorage,getStorage } from '@angular/fire/storage';
   bootstrap: [AppComponent]
 })
 export class AppModule { }
-function provideAuth(arg0: () => any): any[] | import("@angular/core").Type<any> | import("@angular/core").ModuleWithProviders<{}> {
-  throw new Error('Function not implemented.');
-}
 
-function getAuth(): any {
-  throw new Error('Function not implemented.');
-}
+
 
