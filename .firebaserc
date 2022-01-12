@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "totallook-9d00d": {
+      "hosting": {
+        "totallook": [
+          "totallook-9d00d"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "totallook-9d00d"
+  }
+}
