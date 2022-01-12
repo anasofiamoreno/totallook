@@ -8,6 +8,7 @@ import { AuthModule } from '../auth/auth.module';
 import { EditcategoryComponent } from './editcategory/editcategory.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { PromotionComponent } from './promotion/promotion.component';
+import { ShortcatComponent } from './shortcat/shortcat.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { PromotionComponent } from './promotion/promotion.component';
     CategoriesComponent,
     TemplatecategoriComponent,
     EditcategoryComponent,
-    PromotionComponent
+    PromotionComponent,
+    ShortcatComponent
 
   ],
   imports: [

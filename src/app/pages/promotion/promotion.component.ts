@@ -8,7 +8,12 @@ import { NgbCarouselConfig } from '@ng-bootstrap/ng-bootstrap';
   selector: 'app-promotion',
   templateUrl: './promotion.component.html',
   styleUrls: ['./promotion.component.css'],
-  providers: [NgbCarouselConfig]
+  providers: [NgbCarouselConfig],
+  styles: [`
+  /deep/ .carousel-item.active {
+    color: white;
+  }
+`]
 })
 export class PromotionComponent implements OnInit {
 

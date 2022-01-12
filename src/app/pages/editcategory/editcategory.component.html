@@ -1,31 +1,21 @@
 <app-header></app-header>
 
-<div class="card m-4">
-    <div class='editcatrowb'>
-        <button>Back to categories list</button>
-        <p>CATEGORY</p>
+<div class="card m-4 d-flex">
+  <form [formGroup]="formCategory" (ngSubmit)="saveCategory()">
+    <div class="editcatrow mx-5 mt-5">
+      <p>Categoria:</p>
+      <input type="text" formControlName="nameCategory" />
     </div>
-
-    <form
-    [formGroup]="formCategory"
-    (ngSubmit)="saveCategory()">
-    <div class='editcatrow ml-5 mt-5'>
-        <p>Categoria:</p>
-        <input type="text" formControlName="nameCategory">
+    <div class="editcatrow mx-5 mt-5">
+      <p>Category Image</p>
+      <input type="text" formControlName="imgCategory" />
     </div>
-    <div class='editcatrow ml-5 mt-5'>
-        <p>Category Image</p>
-        <input type="file" formControlName="imgCategory">
+    <div class="editcatrow mx-5 mt-5">
+      <p>Description</p>
+      <input type="text" formControlName="description" />
     </div>
-    <div class='editcatrow ml-5'>
-        <p>Description</p>
-        <input type="text" formControlName="description">
+    <div class="editcatrow mt-5 ml-5 mb-2">
+      <button type="submit" class="btn btn-success mx-5 mb-5">Save</button>
     </div>
-    <div class='editcatrow mt-5 ml-5 mb-2'>
-        <button  type="submit">Save</button>
-        <button type="submit">Delete</button>
-    </div>
-</form>
-
-
+  </form>
 </div>
