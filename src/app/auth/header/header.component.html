@@ -11,8 +11,8 @@
                 </form>
             </div>
     <div>
-                <button class="btn btn-outline-success mx-3 boxsize" type="submit" (click)="openModal()">Iniciar sesión</button>
-                
+                <button  *ngIf="user != 'admin@admin.com'" class="btn btn-outline-success mx-3 boxsize" type="submit" (click)="openModal()">Iniciar sesión</button>
+                <button  *ngIf="user == 'admin@admin.com'" class="btn btn-outline-success mx-3 boxsize" type="submit" (click)="logout()">Cerrar sesión</button>
 
                 <img src="/assets/carrito.png " class="mx-3 carrito"/>
         
