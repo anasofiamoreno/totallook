@@ -3,8 +3,6 @@ import { CommonModule } from '@angular/common';
 import { HeaderComponent } from './header/header.component';
 import { ModalLoginComponent } from './modal-login/modal-login.component';
 
-
-
 @NgModule({
   declarations: [
     HeaderComponent,
