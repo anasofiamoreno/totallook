@@ -1,0 +1,15 @@
+.editcatrow{
+    display: flex;
+    flex-direction: row;
+    
+}
+.editcatrowb{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.card{
+    width: 50%;
+    background-color: #ABD19E;
+}

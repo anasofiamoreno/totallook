@@ -1,1 +1,9 @@
-<p>categories works!</p>
+<app-header></app-header>
+<div>
+    <div class='allcat'>
+        <app-templatecategori  *ngFor="let item of heroes" [imglink]='item.imglink' [catname]="item.name">
+        
+        </app-templatecategori>
+    </div>
+</div>
+<!-- <app-footer></app-footer> -->
