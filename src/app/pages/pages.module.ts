@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { MainComponent } from './main/main.component';
 import { CategoriesComponent } from './categories/categories.component';
 import { TemplatecategoriComponent } from './templatecategori/templatecategori.component';
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -13,7 +14,8 @@ import { TemplatecategoriComponent } from './templatecategori/templatecategori.c
     TemplatecategoriComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    FormsModule
   ],
   exports: [
     MainComponent,
