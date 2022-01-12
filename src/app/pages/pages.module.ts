@@ -9,6 +9,7 @@ import { EditcategoryComponent } from './editcategory/editcategory.component';
 
 
 
+
 @NgModule({
   declarations: [
     MainComponent,
@@ -19,7 +20,7 @@ import { EditcategoryComponent } from './editcategory/editcategory.component';
   imports: [
     CommonModule,
     FormsModule,
-    AuthModule
+    AuthModule,
   ],
   exports: [
     MainComponent,
