@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Categorie } from 'src/app/interfaces/interfaces';
 import { versionMajorMinor } from 'typescript';
+import { Firestore } from '@angular/fire/firestore';
+import { getDocs, doc, collection } from 'firebase/firestore';
 
 @Component({
   selector: 'app-categories',
@@ -10,6 +12,7 @@ import { versionMajorMinor } from 'typescript';
 export class CategoriesComponent implements OnInit {
 
 
+  data: Categorie[] = []
 
   heroes: Categorie[] = [
     {name: 'Conjuntos', imglink: "https://firebasestorage.googleapis.com/v0/b/totallook-9d00d.appspot.com/o/conjunto.jpg?alt=media&token=7ab26895-0993-4384-9626-9b3e2667af54"},
@@ -18,9 +21,19 @@ export class CategoriesComponent implements OnInit {
     {name: 'Zapatos', imglink: "https://firebasestorage.googleapis.com/v0/b/totallook-9d00d.appspot.com/o/zapatos.jpg?alt=media&token=d3837f54-9d21-4814-8ff8-c1745ca69c5b"},
 ];
 
-  constructor() { }
+  constructor( private firestore: Firestore) { }
 
-  ngOnInit(): void {
+  async ngOnInit(): Promise<void> {
+
+    
+    (await getDocs(collection(this.firestore, "categories"))).forEach((doc) => {
+      // doc.data() is never undefined for query doc snapshots
+      console.log(doc.id, " => ", doc.data()["imglink"]);
+      this.data.push({name: doc.id, imglink: doc.data()["imglink"] })
+    });
+
+   
+
   }
 
 }
