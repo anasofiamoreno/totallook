@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { doc, Firestore } from '@angular/fire/firestore';
+import { deleteDoc } from '@firebase/firestore';
 import { Categorie } from 'src/app/interfaces/interfaces';
 import { versionMajorMinor } from 'typescript';
 
@@ -18,8 +20,12 @@ export class CategoriesComponent implements OnInit {
     {name: 'Zapatos', imglink: "https://firebasestorage.googleapis.com/v0/b/totallook-9d00d.appspot.com/o/zapatos.jpg?alt=media&token=d3837f54-9d21-4814-8ff8-c1745ca69c5b"},
 ];
 
-  constructor() { }
-
+  constructor(private bd:Firestore) { 
+  
+  }
+async deleteCategory(){
+  await deleteDoc(doc(this.bd, "categories", ));
+}
   ngOnInit(): void {
   }
 
