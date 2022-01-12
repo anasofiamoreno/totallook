@@ -5,8 +5,6 @@ import { ModalLoginComponent } from './modal-login/modal-login.component';
 import { ReactiveFormsModule } from '@angular/forms';
 
 
-
-
 @NgModule({
   declarations: [
     HeaderComponent,
