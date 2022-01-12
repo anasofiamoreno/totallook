@@ -6,27 +6,29 @@ import { TemplatecategoriComponent } from './templatecategori/templatecategori.c
 import { FormsModule } from '@angular/forms';
 import { AuthModule } from '../auth/auth.module';
 import { EditcategoryComponent } from './editcategory/editcategory.component';
-
-
-
-
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { PromotionComponent } from './promotion/promotion.component';
 
 @NgModule({
   declarations: [
     MainComponent,
     CategoriesComponent,
     TemplatecategoriComponent,
-    EditcategoryComponent
+    EditcategoryComponent,
+    PromotionComponent
+
   ],
   imports: [
     CommonModule,
     FormsModule,
     AuthModule,
+    NgbModule
   ],
   exports: [
     MainComponent,
-    CategoriesComponent
+    CategoriesComponent,
   ],
-  schemas: [ CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA ]
+  schemas: [ CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA ],
+  
 })
 export class PagesModule { }
