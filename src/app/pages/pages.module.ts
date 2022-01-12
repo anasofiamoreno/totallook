@@ -4,6 +4,7 @@ import { MainComponent } from './main/main.component';
 import { CategoriesComponent } from './categories/categories.component';
 import { TemplatecategoriComponent } from './templatecategori/templatecategori.component';
 import { FormsModule } from '@angular/forms';
+import { AuthModule } from '../auth/auth.module';
 
 
 
@@ -15,7 +16,8 @@ import { FormsModule } from '@angular/forms';
   ],
   imports: [
     CommonModule,
-    FormsModule
+    FormsModule,
+    AuthModule,
   ],
   exports: [
     MainComponent,
